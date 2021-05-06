@@ -1,0 +1,35 @@
+<div class="container">
+   <div class="card border shadow w-75 mt-1 mx-auto ">
+     <div class="card-body  d-flex flex-wrap flex-column">
+       <!--main content-->
+        <div>
+            <h1 class="text-center bg-secondary text-white rounded">User Registation Form</h1>
+            <!--form page-->
+            <form #ref="ngForm" (ngSubmit)="addUserData()">
+               <!--user name-->
+               <div class="mt-4">
+                  <label for="un">Username</label>
+                  <input type="text" name="Username" id="un" class="form-control" [(ngModel)]=uobj.uname>
+              </div>
+              <!--Date of birth-->
+               <div class="mt-4">
+                  <label for="dob">Date of Birth</label>
+                  <input type="date" name="DOB" id="dob" class="form-control" [(ngModel)]=uobj.dob>
+               </div>
+                <!--Contact-->
+              <div class="mt-4">
+                  <label for="cnt">Contact</label>
+                  <input type="text" name="Contact" id="cnt" class="form-control" [(ngModel)]=uobj.cont>
+              </div>
+               <!--Email-->
+              <div class="mt-4">
+                  <label for="em">Email</label>
+                  <input type="email" name="Email" id="em" class="form-control" [(ngModel)]=uobj.mail>
+              </div>
+              <!--submit Button-->
+              <button type="submit" class="btn d-block mx-auto mt-3 btn-success">Register</button>
+           </form>
+        </div>
+     </div>
+  </div>
+</div>
