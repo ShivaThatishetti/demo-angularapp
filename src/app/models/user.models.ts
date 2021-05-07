@@ -1,4 +1,4 @@
-class user
+export interface user
 {
   uname:string
   dob:string
