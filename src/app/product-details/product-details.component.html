@@ -1,8 +1,8 @@
   <div class="card h-100 shadow">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbX-qnGMyf2NGxT7pzQsBTBmJNxjR5zw7MA&usqp=CAU" class="card-img-top w-100" alt="...">
+    <img src={{productObj.Image}} class="card-img-top w-100" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
+      <h5 class="card-title" style="color: rgb(36, 36, 219);">{{productObj.ProductTitle}}</h5>
       <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <button href="#" class="btn btn-primary" (click)="sendProductDetailsToParent(productObj.ProductTitle)"><i class="far fa-plus-square"></i> Add Product</button>
     </div>
   </div>
