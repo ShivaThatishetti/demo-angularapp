@@ -1,4 +1,4 @@
-.form-control
+/* .form-control
 {
     border: none;
     box-shadow: none !important;
@@ -16,4 +16,11 @@
    margin-left: 270px;
    text-align: end;
    margin-left: 500px;
+} */
+
+
+.active
+{font-weight: bold;
+    
+
 }

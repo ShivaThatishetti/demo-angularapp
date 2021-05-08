@@ -13,7 +13,11 @@ import { Cards5Component } from './cards5/cards5.component';
 import { Cards6Component } from './cards6/cards6.component';
 import { ProductsComponent } from './products/products.component';
 import { FooterComponent } from './footer/footer.component';
-import { ProductDetailsComponent } from './product-details/product-details.component'
+import { ProductDetailsComponent } from './product-details/product-details.component';
+import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { ContactComponent } from './contact/contact.component'
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
     Cards6Component,
     ProductsComponent,
     FooterComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    HomeComponent,
+    RegisterComponent,
+    LoginComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

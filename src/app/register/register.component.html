@@ -1,0 +1,49 @@
+<!-- <div class="mb-3">
+    <label for="formGroupExampleInput" class="form-label">Username</label>
+    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="User name">
+  </div>
+  <div class="mb-3">
+    <label for="formGroupExampleInput2" class="form-label">Password</label>
+    <input type="password" class="form-control" id="formGroupExampleInput2" placeholder="Password">
+  </div> -->
+
+  <div class="container">
+    <div class="card border shadow w-75 mt-1 mx-auto ">
+      <div class="card-body  d-flex flex-wrap flex-column">
+        <!--main content-->
+         <div>
+             <h1 class="text-center bg-secondary text-white rounded">User Registation Form</h1>
+             <!--form page-->
+             <form #ref="ngForm" (ngSubmit)="addUserData()">
+                <!--user name-->
+                <div class="mt-4">
+                   <label for="un">Username</label>
+                   <input type="text" name="Username" id="un" class="form-control" [(ngModel)]=uobj.uname>
+               </div>
+               <!-- password -->
+               <div class="mt-4">
+                  <label for="ps">Password</label>
+                  <input type="password" name="Password" id="ps" class="form-control" [(ngModel)]=uobj.password>
+              </div>
+               <!--Date of birth-->
+                <div class="mt-4">
+                   <label for="dob">Date of Birth</label>
+                   <input type="date" name="DOB" id="dob" class="form-control" [(ngModel)]=uobj.dob>
+                </div>
+                 <!--Contact-->
+               <div class="mt-4">
+                   <label for="cnt">Contact</label>
+                   <input type="text" name="Contact" id="cnt" class="form-control" [(ngModel)]=uobj.cont>
+               </div>
+                <!--Email-->
+               <div class="mt-4">
+                   <label for="em">Email</label>
+                   <input type="email" name="Email" id="em" class="form-control" [(ngModel)]=uobj.mail>
+               </div>
+               <!--submit Button-->
+               <button type="submit" class="btn d-block mx-auto mt-3 btn-success">Register</button>
+            </form>
+         </div>
+      </div>
+   </div>
+ </div>
