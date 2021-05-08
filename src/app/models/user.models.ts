@@ -6,8 +6,13 @@ export interface user
   mail:string
 }
 
-export interface Products{
+export interface Products
+{
+  cost:string,
   ProductTitle:string,
-  discription:string,
+  KerbWeight:string,
+  EngineCapacity:string,
+  Mileage:string,
   Image:string
 }
+ 
