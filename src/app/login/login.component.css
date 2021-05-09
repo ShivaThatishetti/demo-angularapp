@@ -1,0 +1,11 @@
+#main
+{
+    margin-bottom: 300px;
+}
+#text
+{
+    
+    font-family:'Courier New', Courier, monospace ;
+    color:yellow;
+    font-weight:bolder;
+}
