@@ -1,6 +1,6 @@
 body
 {  
-    background-image: url('https://c4.wallpaperflare.com/wallpaper/243/73/138/royal-enfield-macro-logo-wallpaper-preview.jpg') ;
+    background-image: linear-gradient(to right, rgb(158, 158, 235),rgb(194, 194, 241)) ;
     background-size: 100%,100%;
     background-attachment: fixed;
 }

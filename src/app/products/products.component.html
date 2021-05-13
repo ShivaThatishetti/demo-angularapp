@@ -1,13 +1,12 @@
-<h1 class="display-3 text-center " id="text" style="color:rgb(248, 248, 8);">Royal Enfield Bikes</h1>
 
-<div class="text-center">
-    <h5 class="text-white w-5">No of Bikes in cart <i class="fas fa-shopping-cart"></i> : {{productCount}}</h5>
-    <span *ngFor="let title of productsSentByChild" class="text-white">{{title}}, </span>
+<div class="btn-group mt-5 w-100" role="group" aria-label="Basic example">
+    <button type="button" routerLink="phones" routerLinkActive="active" class="btn border border-3 border-warning   text-white p-2">Mobiles</button>
+    <button type="button" routerLink="laptops" routerLinkActive="active" class="btn border border-3 border-warning  text-white">Laptops</button>
+    <button type="button" routerLink="bikes" routerLinkActive="active" class="btn border border-3 border-warning  text-white">Bikes</button>
 </div>
+   <div class="container">
+     <router-outlet></router-outlet>
+   </div>
+   
+   
 
-
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-5 mb-5">
-    <div class="col" *ngFor="let prObj of products">
-        <app-product-details [productObj]=prObj (myEvent)="getProductDetailsFromChild($event)"></app-product-details>
-    </div>
-</div>

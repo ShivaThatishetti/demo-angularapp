@@ -1,0 +1,6 @@
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4" style="margin-bottom: 300px;">
+    <div class="col" *ngFor="let proobj of bikes">
+        <app-product-details [productObj]=proobj (event)=getproductdetailsfromchild($event)></app-product-details>
+    </div>
+  </div>
+ 

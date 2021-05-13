@@ -6,7 +6,7 @@ export interface user
   mail:string
 }
 
-export interface Products
+export interface bikeProducts
 {
   cost:string,
   ProductTitle:string,
@@ -14,5 +14,17 @@ export interface Products
   EngineCapacity:string,
   Mileage:string,
   Image:string
+}
+export interface Products1
+{
+  Brand:string,
+  Model:string,
+  Image:string
+}
+
+export interface Products2
+{
+  productTitle:string,
+  productImage:string
 }
  

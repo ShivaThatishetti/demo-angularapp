@@ -1,33 +1,40 @@
-<!-- nabar -->
-<div class="navbar bg-light navbar-light navbar-expand-sm"> 
-  <div class="collapse navbar-collapse" id="nv">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
-            <li class="nav-item">
-              <a routerLink="home" class="nav-link" routerLinkActive='active'>Home</a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="register" class="nav-link" routerLinkActive='active'>Register</a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="login" class="nav-link" routerLinkActive='active'>Login</a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="contactUs" class="nav-link" routerLinkActive='active'>Contact us</a>
-            </li>
-            <li class="nav-item">
-              <a routerLink="products" class="nav-link" routerLinkActive='active'>Products</a>
-            </li>
-          </ul>
-  </div>
-  <button class="me-5 navbar-toggler" data-bs-toggle=collapse data-bs-target=#nv >
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <p class="navbar-brand h3 text-primary"style="font-family:cursive;font-size:30px;"><i class="fas fa-mobile-alt"></i> Online Store</p>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-  </button>
-</div>
-
-
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link h5" routerLink="home" routerLinkActive='active'><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link h5" routerLink="register" routerLinkActive='active'><i class="fas fa-registered"></i> Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link h5" routerLink="login" routerLinkActive='active'><i class="fas fa-sign-in-alt"></i> Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link h5" routerLink="contactus" routerLinkActive='active'><i class="fas fa-address-book"></i> Contactus</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link h5" routerLink="products" routerLinkActive='active'><i class="fab fa-product-hunt"></i> Products</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!--Products page component-->
 <div class="container">
-  <!-- navbar routers -->
-  <router-outlet></router-outlet>
+<router-outlet></router-outlet>
 </div>
-<!-- footer -->
-<app-footer class="mt-auto "></app-footer>
+<!--Footer component-->
+<div class="footer">
+<app-footer></app-footer>
+</div>
+
+
+
+
