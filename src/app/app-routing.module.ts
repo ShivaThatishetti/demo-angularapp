@@ -9,11 +9,13 @@ import {TelivisionComponent} from './telivision/telivision.component'
 import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
 import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component'
+import { TestComponent } from './test/test.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
   {path:"register",component:RegisterComponent},
   {path:"login",component:LoginComponent},
+  {path:"Test",component:TestComponent},
   {path:"contactus",component:ContactComponent},
   {path:"products",component:ProductsComponent,children:[
     {path:"phones",component:MobilesComponent},

@@ -17,7 +17,8 @@ import { TelivisionComponent } from './telivision/telivision.component';
 import { MobilesComponent } from './mobiles/mobiles.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { BikeDetailsComponent } from './bike-details/bike-details.component';
-import {HttpClientModule} from '@angular/common/http'
+import {HttpClientModule} from '@angular/common/http';
+import { TestComponent } from './test/test.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {HttpClientModule} from '@angular/common/http'
     MobilesComponent,
     BikesComponent,
     PagenotfoundComponent,
-    BikeDetailsComponent
+    BikeDetailsComponent,
+    TestComponent
   ],
   imports: [
     BrowserModule,
