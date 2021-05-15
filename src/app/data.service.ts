@@ -1,14 +1,20 @@
-import { Injectable } from '@angular/core';
-import {bikeProducts} from './models/user.models'
+import { Injectable } from '@angular/core'
 import {Products1} from './models/user.models'
-
+import {HttpClient} from '@angular/common/http'
+import {Observable} from 'rxjs'
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  constructor() { }
+  constructor(private hc:HttpClient) { }
+
+  getMobilesData1():Observable<Products1[]>
+  {
+    return this.hc.get<Products1[]>('assets/mobiles.json')
+  }
+  
   bikes:Products1[]=[{Model:"Royal Enfiled",Brand:" Classic 350 ",Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdjBy9peZKM3jwkQ5cuOamdvVNfYgnWveH9w&usqp=CAU"},
     {Model:"Yamaha",Brand:"R15",Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT5QSYp-zg5PIiw1LzxSKvteRKf-0Aq8m2Jjw&usqp=CAU"},
     {Model:"Honda",Brand:"CBR",Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLk7mmxJruHXGH99Z300VKDwjGzN2gQ4T2dA&usqp=CAU"},
@@ -27,26 +33,14 @@ export class DataService {
     {Model:"Asus",Brand:"ROG",Image:"https://rog.asus.com/media/1546852826561.jpg"},
     {Model:"Dell",Brand:"Inspiron Plus",Image:"http://i.dell.com/sites/csimages/Videos_Images/en/3e4554b9-3080-4a01-bbe7-556b79678c6e.jpg"}
     ]
-  private mobiles:Products1[]=[{Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRPTdY7Wu9EWXkAgiJK_znD17B53gPjqtJNg&usqp=CAU",Model:"I Phone 6s",Brand:"Apple"},
-    {Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3mGY2sKeo0F53LE8b5t0lzgByCI6KdoXYCA&usqp=CAU" ,Model:"I Phone 7s",Brand:"Apple"},
-    {Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnBq7HyVnx1WwXx1jzTbB3OJbfRtjdf9jTwA&usqp=CAU",Model:"I Phone 8plus",Brand:"Apple"},
-    {Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6QqNFhUPOmJ94GPmW4F7isLoB8__EtQLFjQ&usqp=CAU",Model:"I Phone 11",Brand:"Apple"},
-    {Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6ADak8w09vRHZ5eyPHDAJOdJ2nj4VzZvO5w&usqp=CAU",Model:"I Phone 11pro Max",Brand:"Apple"},
-    {Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTojMTcmyfbiMctJhZmLOt9dPiWtOkwki1icA&usqp=CAU",Model:"I Phone 12 pro",Brand:"Apple"},
-    {Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRf5pg8rIy7s5d1flEjtY1M-7qz_jgEUbayJw&usqp=CAU",Model:"I Phone 6plus",Brand:"Apple"},
-    {Image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_eVt2JShypIShKK1T9kQ80ucs08VIvalfFA&usqp=CAU",Model:"I Phone 13 pro",Brand:"Apple"}
-     ]
 
     getbikesdata()
     {
       return this.bikes
     }
-   getMobilesData()
-   {
-     return this.mobiles
-   }
-   getLaptopData()
-   {
-     return this.Laptops
-   }
+
+    getLaptopData()
+    {
+      return this.Laptops
+    }
 }

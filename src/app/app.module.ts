@@ -17,6 +17,7 @@ import { TelivisionComponent } from './telivision/telivision.component';
 import { MobilesComponent } from './mobiles/mobiles.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { BikeDetailsComponent } from './bike-details/bike-details.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { BikeDetailsComponent } from './bike-details/bike-details.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
