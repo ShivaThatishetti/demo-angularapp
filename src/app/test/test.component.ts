@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { FakeDataService } from '../fake-data.service';
 import {Post} from '../models/user.models'
 
@@ -10,14 +11,16 @@ import {Post} from '../models/user.models'
 export class TestComponent implements OnInit , OnDestroy{
 
   
-  MySubscription:any
+  MySubscription:Subscription
   constructor(private fsObj:FakeDataService) { }
 
   array:Post[]=[]
-  ngOnInit(): void
+  ngOnInit()
    {
-    this.MySubscription=this.fsObj.getposts().subscribe(data=>{this.array=data},err=>{console.log("Error",err)})
-    
+    // this.MySubscription=this.fsObj.getposts().subscribe(data=>{this.array=data},err=>{console.log("Error",err)})
+
+    this.MySubscription=this.fsObj.getUsers().subscribe(data=>{this.array=data},err=>{console.log("Error",err)})
+            
    }
   ngOnDestroy()
   {

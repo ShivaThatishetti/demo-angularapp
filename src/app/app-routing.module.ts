@@ -10,6 +10,7 @@ import { ProductsComponent } from './products/products.component';
 import { RegisterComponent } from './register/register.component';
 import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component'
 import { TestComponent } from './test/test.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -17,6 +18,7 @@ const routes: Routes = [
   {path:"login",component:LoginComponent},
   {path:"Test",component:TestComponent},
   {path:"contactus",component:ContactComponent},
+  {path:'Users',component:UserListComponent},
   {path:"products",component:ProductsComponent,children:[
     {path:"phones",component:MobilesComponent},
     {path:"bikes",component:BikesComponent},
