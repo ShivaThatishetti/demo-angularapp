@@ -13,7 +13,7 @@ export class TelivisionComponent implements OnInit {
 
   ngOnInit(): void 
   {
-    this.products=this.tvObj.getLaptopData()
+    this.tvObj.getLaptopData().subscribe(obj=>{this.products=obj},err=>{console.log('Error',err)})
   }
   products:Products1[]=[]
   

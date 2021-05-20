@@ -1,0 +1,63 @@
+<div class="container ">
+   <div class="row m-2">
+       <div class=" col-5 m-auto">
+           <div>
+              <img  height="100%" width="100%" src={{user.Image}} alt="image not found">
+           </div>
+        </div>
+       <div class="col-7 "> 
+           <h2 class="text-center text-danger">Information</h2>
+           <div class="row">
+              <div class="col-4 text-end"><h4>Name :</h4></div>
+              <div class="col-8"><h4>{{user.name}}</h4></div>
+           </div>
+           <div class="row">
+               <div class="col-4 text-end"><h4>Profession :</h4></div>
+               <div class="col-8"><h4>{{user.profession}}</h4></div>
+           </div>
+           <div class="row">
+               <div class="col-4 text-end"><h4>Id :</h4></div>
+               <div class="col-8"><h4>{{user.id}}</h4></div>
+           </div>
+           <div class="row">
+               <div class="col-4 text-end"><h4>E-mail :</h4></div>
+               <div class="col-8"><h4>{{user.email}}</h4></div>
+           </div>
+           <div class="row">
+               <div class="col-4 text-end"><h4>Mobile :</h4></div>
+               <div class="col-8"><h4>{{user.phone}}</h4></div>
+           </div>
+           
+            <div class="row">
+                <div class=" text-center text-danger"><h2>Address</h2></div>
+            </div>
+            <div class="row">
+                <div class="col-4 text-end"><h4>Street : </h4></div>
+                <div class="col-8"><h4>{{user.address.street}}</h4></div>
+            </div>
+            <div class="row">
+                <div class="col-4 text-end"><h4>city :</h4></div>
+                <div class="col-8"><h4>{{user.address.suite}}</h4></div>
+            </div>
+            <div class="row">
+                <div class="col-4 text-end"><h4>Zip code :</h4></div>
+                <div class="col-8"><h4>{{user.address.zipcode}}</h4></div>
+            </div>
+            <div class="row">
+                <div class="col-4 text-end"><h4>Geo :</h4></div>
+                 <div class="col-4">
+                    <div class="row">
+                       <div class="col-6 text-end"><h4>Lat :</h4></div>
+                       <div class="col-6"><h4>{{user.address.geo.lat}}</h4></div>
+                    </div>
+                    <div class="row">
+                       <div class="col-6 text-end"><h4>Lng :</h4></div>
+                       <div class="col-6"><h4>{{user.address.geo.lng}}</h4></div>
+                     </div>
+                </div>
+                <div class="col-4"></div>
+            </div>
+            
+        </div>
+   </div>
+</div>

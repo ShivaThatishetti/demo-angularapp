@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from '../data.service';
+import { Component, OnInit } from '@angular/core'
+import { DataService } from '../data.service'
 import {Products1} from '../models/user.models'
 
 @Component({
@@ -12,7 +12,7 @@ export class BikesComponent implements OnInit {
   constructor(private bikobj:DataService) { }
 
   ngOnInit(): void {
-    this.bikes=this.bikobj.getbikesdata()
+    this.bikobj.getbikesdata().subscribe(data=>{this.bikes=data},err=>{console.log("Error",err)})
   }
   bikes:Products1[]=[]
   

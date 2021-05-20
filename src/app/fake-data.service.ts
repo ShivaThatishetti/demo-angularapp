@@ -15,10 +15,14 @@ export class FakeDataService {
   }
   getusers():Observable<any>
   {
-    return this.hc.get<any>('https://reqres.in/api/unknown')
+    return this.hc.get<any>('http://localhost:3000/Users')
   }
   getUsers():Observable<any>
   {
     return this.hc.get<any>('http://jsonplaceholder.typicode.com/users')
+  }
+  getpostsbyid(id):Observable<any>
+  {
+    return this.hc.get<any>('http://localhost:3000/Users/'+id)
   }
 }

@@ -11,12 +11,14 @@ import { RegisterComponent } from './register/register.component';
 import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component'
 import { TestComponent } from './test/test.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { TelivisionDetailsComponent } from './user-details_for_users/telivision-details.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
   {path:"register",component:RegisterComponent},
   {path:"login",component:LoginComponent},
   {path:"Test",component:TestComponent},
+  {path:'Users/:id',component:TelivisionDetailsComponent},
   {path:"contactus",component:ContactComponent},
   {path:'Users',component:UserListComponent},
   {path:"products",component:ProductsComponent,children:[
