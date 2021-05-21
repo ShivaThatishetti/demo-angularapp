@@ -12,6 +12,8 @@ import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component'
 import { TestComponent } from './test/test.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { TelivisionDetailsComponent } from './user-details_for_users/telivision-details.component';
+import { ViewMobilesComponent } from './view-mobiles/view-mobiles.component';
+import { AddMobilesComponent } from './add-mobiles/add-mobiles.component';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -22,12 +24,16 @@ const routes: Routes = [
   {path:"contactus",component:ContactComponent},
   {path:'Users',component:UserListComponent},
   {path:"products",component:ProductsComponent,children:[
-    {path:"phones",component:MobilesComponent},
+    {path:"phones",component:MobilesComponent,children:[
+      {path:'ViewMobiles',component:ViewMobilesComponent},
+      {path:'AddMobiles',component:AddMobilesComponent},
+      {path:"",redirectTo:'/products/phones/ViewMobiles',pathMatch:"full"}]},
     {path:"bikes",component:BikesComponent},
     {path:"laptops",component:TelivisionComponent},
-    {path:"",redirectTo:'/products/phones',pathMatch:"full"}
+    {path:"",redirectTo:'/products/phones/ViewMobiles',pathMatch:"full"}
   ]},
   {path:"",redirectTo:'/home',pathMatch:"full"},
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   {path:"**",component:PagenotfoundComponent}
 ];
 

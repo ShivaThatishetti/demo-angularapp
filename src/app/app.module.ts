@@ -18,7 +18,9 @@ import { MobilesComponent } from './mobiles/mobiles.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { BikeDetailsComponent } from './bike-details/bike-details.component';
 import {HttpClientModule} from '@angular/common/http';
-import { TestComponent } from './test/test.component'
+import { TestComponent } from './test/test.component';
+import { AddMobilesComponent } from './add-mobiles/add-mobiles.component';
+import { ViewMobilesComponent } from './view-mobiles/view-mobiles.component'
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { TestComponent } from './test/test.component'
     BikesComponent,
     PagenotfoundComponent,
     BikeDetailsComponent,
-    TestComponent
+    TestComponent,
+    AddMobilesComponent,
+    ViewMobilesComponent
   ],
   imports: [
     BrowserModule,

@@ -35,4 +35,8 @@ export interface Post
   title:string,
   body:string
 }
+export class mobiles
+{
+  constructor(public Brand:string,public Image:string,public Model){}
+}
  
