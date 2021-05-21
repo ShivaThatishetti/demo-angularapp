@@ -5,10 +5,23 @@
         <th>Image</th>
     </thead>
     <tbody>
-        <tr *ngFor='let mobile of mobiles'>
-            <td>{{mobile.Brand}}</td>
-            <td>{{mobile.Model}}</td>
+        <tr *ngFor='let mobile of mobiles; let ind=index'>
+            <td>
+                <span *ngIf="!editMobileStatus || editMobileIndex!=ind">
+                    {{mobile.Brand}}
+                </span>
+                <input *ngIf="!(!editMobileStatus || editMobileIndex!=ind)" type="text" name="Brand" attr.id="a{{ind}}" [(ngModel)]='editMobileObj.Brand'>  
+            </td>
+            <td>
+                <span *ngIf="!editMobileStatus || editMobileIndex!==ind" >
+                    {{mobile.Model}}
+                </span>
+                <input *ngIf="!(!editMobileStatus || editMobileIndex!=ind)" type="text" name="Model" attr.id="b{{ind}}" [(ngModel)]='editMobileObj.Model'>
+            </td>
             <td><img width="200px" height="100px" src={{mobile.Image}} alt=""></td>
+            <td *ngIf="(!editMobileStatus || editMobileIndex!=ind)"><button  class=" btn p-1 m-1" (click)=editMobile(mobile,ind)> <h1> <i class="fas fa-edit"></i></h1> </button></td>
+            <td *ngIf="!(!editMobileStatus || editMobileIndex!=ind)"><button  class="btn p-1 m-1" (click)=saveMobile(mobile)> <h1><i class="text-success fas fa-save"></i></h1></button></td>
+            <td *ngIf="(!editMobileStatus || editMobileIndex!=ind)"><button  class="btn p-1 m-1" (click)=deleteMobile(mobile,ind)> <h1><i class="text-danger fas fa-trash-alt"></i></h1></button></td>
         </tr>        
     </tbody>
 </table>

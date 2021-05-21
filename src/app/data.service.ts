@@ -20,6 +20,16 @@ export class DataService {
   {
     return this.hc.post('http://localhost:3000/Mobiles',mobileobj)
   }
+  //to edit mobile data
+  updateMobileData(mobileobj)
+  {
+    return this.hc.put('http://localhost:3000/Mobiles/'+mobileobj.id,mobileobj)
+  }
+  //to delete mobiles
+  deleteMobiledata(id)
+  {
+    return this.hc.delete('http://localhost:3000/Mobiles/'+id)
+  }
   getbikesdata():Observable<any>
   {
     return this.hc.get<any>('http://localhost:3000/Bikes')
