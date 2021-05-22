@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Products1} from '../models/user.models'
 import { DataService } from '../data.service'
-import {HttpClient} from '@angular/common/http'
-import {Observable, observable} from 'rxjs'
+import { Observable } from 'rxjs';
 
 
 @Component({
@@ -17,9 +16,9 @@ export class ViewMobilesComponent implements OnInit {
    ngOnInit()
    {
     this.dsObj.getMobilesData1().subscribe(data=>{this.mobiles=data},err=>{console.log('err is',err)})
-   }
-   mobiles:Products1[]=[]
-   
+  }
+     searchItem:string
+     mobiles:Products1[]=[]
      productsSentByChild=[]
      productCount=0
      getProductDetailsFromChild(productTitle)

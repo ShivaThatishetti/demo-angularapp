@@ -20,7 +20,9 @@ import { BikeDetailsComponent } from './bike-details/bike-details.component';
 import {HttpClientModule} from '@angular/common/http';
 import { TestComponent } from './test/test.component';
 import { AddMobilesComponent } from './add-mobiles/add-mobiles.component';
-import { ViewMobilesComponent } from './view-mobiles/view-mobiles.component'
+import { ViewMobilesComponent } from './view-mobiles/view-mobiles.component';
+import { SquarePipe } from './square.pipe';
+import { SearchPipe } from './search.pipe'
 
 @NgModule({
   declarations: [
@@ -42,7 +44,9 @@ import { ViewMobilesComponent } from './view-mobiles/view-mobiles.component'
     BikeDetailsComponent,
     TestComponent,
     AddMobilesComponent,
-    ViewMobilesComponent
+    ViewMobilesComponent,
+    SquarePipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

@@ -16,7 +16,13 @@ export class ViewProductsComponent implements OnInit {
   editMobileStatus:boolean=false
 
   ngOnInit(): void {
+    this.getMobiles()
+    }
+
+  getMobiles()
+  {
     this.pd.getMobilesData1().subscribe(obj=>{this.mobiles=obj},err=>{console.log('Error',err)})
+  
   }
   editMobile(mobileobj,index)
   {
@@ -31,10 +37,12 @@ export class ViewProductsComponent implements OnInit {
     this.editMobileStatus=false
     this.pd.updateMobileData(modifiedMobileObj).subscribe(
       ref=>{},err=>{console.log('Error',err)})
+      this.getMobiles()
   }
   deleteMobile(mobileObj)
   {
     this.pd.deleteMobiledata(mobileObj.id).subscribe(ref=>{alert('Mobile deleted')},
     err=>{console.log('Error',err)})
+    this.getMobiles()
   }
 }

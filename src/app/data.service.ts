@@ -38,4 +38,4 @@ export class DataService {
   {
     return this.hc.get<any>('http://localhost:3000/Laptops')
   }  
-}
+  }

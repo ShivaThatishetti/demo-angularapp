@@ -14,6 +14,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { TelivisionDetailsComponent } from './user-details_for_users/telivision-details.component';
 import { ViewMobilesComponent } from './view-mobiles/view-mobiles.component';
 import { AddMobilesComponent } from './add-mobiles/add-mobiles.component';
+import { AdminGuard } from './admin.guard';
 
 const routes: Routes = [
   {path:"home",component:HomeComponent},
@@ -33,7 +34,7 @@ const routes: Routes = [
     {path:"",redirectTo:'/products/phones/ViewMobiles',pathMatch:"full"}
   ]},
   {path:"",redirectTo:'/home',pathMatch:"full"},
-  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
+  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),canActivate:[AdminGuard] },
   {path:"**",component:PagenotfoundComponent}
 ];
 

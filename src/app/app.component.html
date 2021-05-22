@@ -13,8 +13,11 @@
         <li class="nav-item">
           <a class="nav-link h5" routerLink="register" routerLinkActive='active'><i class="fas fa-registered"></i> Register</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="!userLoginStatus()">
           <a class="nav-link h5" routerLink="login" routerLinkActive='active'><i class="fas fa-sign-in-alt"></i> Login</a>
+        </li>
+        <li class="nav-item" *ngIf="userLoginStatus()" >
+          <a class="nav-link h5" routerLink="login" routerLinkActive='active' (click)='userLogout()'><i class="fas fa-sign-in-alt"></i> Logout</a>
         </li>
         <li class="nav-item">
           <a class="nav-link h5" routerLink="contactus" routerLinkActive='active'><i class="fas fa-address-book"></i> Contactus</a>
