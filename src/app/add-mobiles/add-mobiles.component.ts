@@ -17,7 +17,6 @@ export class AddMobilesComponent implements OnInit {
 mobileModel=new mobiles('','','')
 onSubmitNewMobile()
 {
-  console.log(this.mobileModel)
   this.dsobj.createNewMobile(this.mobileModel).subscribe(res=>{this.router.navigateByUrl('products/phones')},
   err=>{console.log('Error',err)})}
 }
