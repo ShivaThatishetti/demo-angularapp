@@ -1,11 +1,14 @@
-<table class="table text-center text-white" style="margin-bottom: 300px">
+<input type="text" name="title" form-control id="abc" placeholder="Search" [(ngModel)]=searchItem>
+
+
+<table class="table text-center text-white" >
     <thead>
         <th>Brand</th>
         <th>Model</th>
         <th>Image</th>
     </thead>
     <tbody>
-        <tr *ngFor='let mobile of mobiles; let ind=index'>
+        <tr *ngFor='let mobile of mobiles | search:searchItem  | paginate:{itemsPerPage:2, currentPage:p}; let ind=index'>
             <td>
                 <span *ngIf="!editMobileStatus || editMobileIndex!=ind">
                     {{mobile.Brand | uppercase}}
@@ -25,3 +28,7 @@
         </tr>        
     </tbody>
 </table>
+<!-- Pagination -->
+<div class="text-center text-dark" style="margin-bottom: 300px">
+    <pagination-controls (pageChange)='p=$event'></pagination-controls>
+</div>

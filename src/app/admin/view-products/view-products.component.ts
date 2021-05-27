@@ -10,7 +10,9 @@ import {mobiles} from '../../models/user.models'
 export class ViewProductsComponent implements OnInit {
 
   constructor(private pd:DataService) { }
+  p=1
   mobiles:any
+  searchItem:any
   editMobileIndex;
   editMobileObj=new mobiles('','','')
   editMobileStatus:boolean=false

@@ -23,6 +23,7 @@ import { AddMobilesComponent } from './add-mobiles/add-mobiles.component';
 import { ViewMobilesComponent } from './view-mobiles/view-mobiles.component';
 import { SquarePipe } from './square.pipe';
 import { SearchPipe } from './search.pipe'
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -45,14 +46,14 @@ import { SearchPipe } from './search.pipe'
     TestComponent,
     AddMobilesComponent,
     ViewMobilesComponent,
-    SquarePipe,
-    SearchPipe
+    SquarePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
