@@ -1,5 +1,31 @@
-<h1 class="display-3 text-center "  style="color: #D400FF;">Royal Enfield Bikes</h1>
+<div class="navbar bg-light navbar-light navbar-expand-sm"> 
+  <div class="collapse navbar-collapse" id="nv">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+              <a routerLink="home" class="nav-link" routerLinkActive='active'>Home</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="register" class="nav-link" routerLinkActive='active'>Register</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="login" class="nav-link" routerLinkActive='active'>Login</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="contactUs" class="nav-link" routerLinkActive='active'>Contact us</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="products" class="nav-link" routerLinkActive='active'>Products</a>
+            </li>
+          </ul>
+  </div>
+  <button class="me-5 navbar-toggler" data-bs-toggle=collapse data-bs-target=#nv >
+      <span class="navbar-toggler-icon"></span>
+  </button>
+</div>
+
+
 <div class="container">
-  <app-products></app-products>
+  <!-- <app-products></app-products> -->
+  <router-outlet></router-outlet>
 </div>
 <app-footer class="mt-auto"></app-footer>
