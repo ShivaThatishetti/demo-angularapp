@@ -1,0 +1,7 @@
+<input type="text" name="title" form-control id="abc" placeholder="Search" [(ngModel)]=searchItem>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4" style="margin-bottom: 200px;">
+    <div class="col" *ngFor="let proObj of mobiles | search:searchItem">
+        <app-product-details [productObj]=proObj (event)=getproductdetailsfromchild($event)></app-product-details>
+    </div>
+ </div>
+ 

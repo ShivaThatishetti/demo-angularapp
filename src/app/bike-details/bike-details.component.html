@@ -1,0 +1,24 @@
+<div class="card h-100 shadow">
+    <img height="45%" src={{bikes.Image}} class="card-img-top w-100" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" style="color: #FF5500;">{{bikes.ProductTitle}}</h5>
+     <div class="row">
+        <div class="col-7 text-end ">Cost :</div>
+        <div class="col-5 text-start">{{bikes.cost}}</div>
+      </div>
+      <div class="row">
+        <div class="col-7 text-end ">Engine Capacity :</div>
+        <div class="col-5 text-start">{{bikes.EngineCapacity}}</div>
+      </div>
+      <div class="row">
+        <div class="col-7 text-end ">Milage :</div>
+        <div class="col-5 text-start">{{bikes.Mileage}}</div>
+      </div>
+      <div class="row">
+        <div class="col-7 text-end ">Kerb Weight :</div>
+        <div class="col-5 text-start">{{bikes.KerbWeight}}</div>
+      </div> 
+
+      <button href="#" class="btn btn-success float-end mt-3" (click)="sendProductDetailsToParent(bikes.ProductTitle)"><i class="fas fa-cart-plus"></i> Add to cart</button>
+    </div>
+</div>

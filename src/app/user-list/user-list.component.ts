@@ -1,41 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { FakeDataService } from '../fake-data.service';
+import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
   styleUrls: ['./user-list.component.css']
 })
-export class UserListComponent 
+export class UserListComponent implements OnInit,OnDestroy
 {
-
-  users=[];
-  uobj:user={uname:'',dob:'',cont:'',mail:''}
-  //list of user array
-  addUserData()
+  constructor(private hc:FakeDataService,private router:Router){}
+  user:any
+  subscrib:Subscription
+  ngOnInit()
   {
-    let obj=this.uobj
-    console.log(obj)
-    //this.users.push(uobj);
-    //ref.reset();
-    this.uobj={uname:'',dob:'',cont:'',mail:''}
+    this.subscrib=this.hc.getusers().subscribe(data=>{this.user=data},err=>{console.log("Error",err)})
   }
-  //deleteing username
-    deleteUser(index)
+  ngOnDestroy()
   {
-    
-    this.users.splice(index,1)
+    this.subscrib.unsubscribe()
   }
-
-
-}
-
-
-
-
-class user
-{
-  uname:string
-  dob:string
-  cont:string
-  mail:string
+  onSelectId(id)
+  {
+    this.router.navigateByUrl('Users/'+id)
+  }
 }

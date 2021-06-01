@@ -1,0 +1,22 @@
+<!-- 
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4" style="margin-bottom: 200px;">
+    <div class="col" *ngFor="let proObj of mobiles">
+        <app-product-details [productObj]=proObj (event)=getproductdetailsfromchild($event)></app-product-details>
+    </div>
+ </div>
+  -->
+
+
+
+
+  
+<div class="btn-group mt-5 w-50" role="group" aria-label="Basic example">
+    <button type="button" routerLink="ViewMobiles" routerLinkActive="active" class="btn border border-3 border-warning   text-white">View</button>
+    <button type="button" routerLink="AddMobiles" routerLinkActive="active" class="btn border border-3 border-warning  text-white">Add</button>
+</div>
+   <div class="container">
+     <router-outlet></router-outlet>
+   </div>
+   
+   
+

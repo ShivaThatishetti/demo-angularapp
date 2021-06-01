@@ -11,7 +11,19 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
-import { ContactComponent } from './contact/contact.component'
+import { ContactComponent } from './contact/contact.component';
+import { BikesComponent } from './bikes/bikes.component'
+import { TelivisionComponent } from './telivision/telivision.component';
+import { MobilesComponent } from './mobiles/mobiles.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { BikeDetailsComponent } from './bike-details/bike-details.component';
+import {HttpClientModule} from '@angular/common/http';
+import { TestComponent } from './test/test.component';
+import { AddMobilesComponent } from './add-mobiles/add-mobiles.component';
+import { ViewMobilesComponent } from './view-mobiles/view-mobiles.component';
+import { SquarePipe } from './square.pipe';
+import { SearchPipe } from './search.pipe'
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -24,12 +36,24 @@ import { ContactComponent } from './contact/contact.component'
     HomeComponent,
     RegisterComponent,
     LoginComponent,
-    ContactComponent
+    ContactComponent,
+    BikesComponent,
+    TelivisionComponent,
+    MobilesComponent,
+    BikesComponent,
+    PagenotfoundComponent,
+    BikeDetailsComponent,
+    TestComponent,
+    AddMobilesComponent,
+    ViewMobilesComponent,
+    SquarePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
