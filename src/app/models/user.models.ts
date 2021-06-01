@@ -6,7 +6,7 @@ export interface user
   mail:string
 }
 
-export interface bikeProducts
+export interface Products
 {
   cost:string,
   ProductTitle:string,
@@ -14,29 +14,5 @@ export interface bikeProducts
   EngineCapacity:string,
   Mileage:string,
   Image:string
-}
-export interface Products1
-{
-  Brand:string,
-  Model:string,
-  Image:string
-}
-
-export interface Products2
-{
-  productTitle:string,
-  productImage:string
-}
-
-export interface Post
-{
-  userId:number,
-  id:number,
-  title:string,
-  body:string
-}
-export class mobiles
-{
-  constructor(public Brand:string,public Image:string,public Model){}
 }
  
